@@ -49,6 +49,46 @@ public int compareTo(Task o) {
                 ", dataUtworzenia=" + dataUtworzenia +
                 '}';
     }
+
+    public Enum getPriorytet() {
+        return priorytet;
+    }
+
+    public String getNazwa() {
+        return nazwa;
+    }
+
+    public String getOpis() {
+        return opis;
+    }
+
+    public Enum getStatus() {
+        return status;
+    }
+
+    public LocalDateTime getDataUtworzenia() {
+        return dataUtworzenia;
+    }
+
+    public void setPriorytet(Enum priorytet) {
+        this.priorytet = priorytet;
+    }
+
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
+    }
+
+    public void setOpis(String opis) {
+        this.opis = opis;
+    }
+
+    public void setStatus(Enum status) {
+        this.status = status;
+    }
+
+    public void setDataUtworzenia(LocalDateTime dataUtworzenia) {
+        this.dataUtworzenia = dataUtworzenia;
+    }
 }
 
 

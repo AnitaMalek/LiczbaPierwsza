@@ -6,4 +6,6 @@ public enum Status {
     W_TRAKCIE_REALIZACJI,
     ZAKONCZONE;
 
+
+
 }

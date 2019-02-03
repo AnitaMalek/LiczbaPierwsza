@@ -19,15 +19,25 @@ public Task(Enum priorytet, String nazwa, String opis, Enum status, LocalDateTim
     this.dataUtworzenia = dataUtworzenia;
 }
 
-    @Override
-    public int compareTo(Task o) {
-        int result = this.nazwa.compareTo(o.nazwa);
-        if (result==0){
-            result = this.opis.compareTo(o.opis);
-        }
-        return result;
-    }
+//    @Override
+//    public int compareTo(Task o) {
+//        int result = this.nazwa.compareTo(o.nazwa);
+//        if (result==0){
+//            result = this.opis.compareTo(o.opis);
+//        }
+//        return result;
+//    }
 
+public int compareTo(Task o) {
+    int result = this.priorytet.compareTo(o.priorytet);
+    if (result==0) {
+        result = this.nazwa.compareTo(o.nazwa);
+    }
+    if (result==0) {
+        result = this.status.compareTo(o.status);
+    }
+    return result;
+    }
 
     @Override
     public String toString() {

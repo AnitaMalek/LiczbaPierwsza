@@ -16,11 +16,5 @@ public class BubbleSort {
           }
       }
 
-// for(int i=1; i<x.length; i++) {
-//         int temp=0;
-//         if(x[i-1] > x[i]) {
-//            temp = x[i-1];
-//            x[i-1] = x[i];
-//            x[i] = temp;
   }
 

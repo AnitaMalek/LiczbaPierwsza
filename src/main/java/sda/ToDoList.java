@@ -22,6 +22,13 @@ public class ToDoList {
         return tasks;
     }
 
-
+    public List<Task>taskListComp(Comparator<Task> comp, KOLEJNOSC ASC_or_DESC){
+        if(ASC_or_DESC.name().equalsIgnoreCase("ASC")) {
+            tasks.sort(comp);
+        }else if(ASC_or_DESC.name().equalsIgnoreCase("DESC")){
+            tasks.sort(comp.reversed());
+        }
+        return tasks;
+    }
 }
 

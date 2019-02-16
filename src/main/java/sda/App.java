@@ -57,18 +57,25 @@ public class App {
 
 //losowanie 10 z 100 liczb, przypisywanie do parzystych lub nie:
         Random random = new Random();
-       int liczby = 10;
+       int liczby = 20;
        List<Integer> odd = new ArrayList<>();
        List<Integer> even = new ArrayList<>();
 
-       for (int i= 1; i <= liczby; i++) {
-           int temp = random.nextInt(100);
-           if (temp %2 ==0) even.add(temp);
-           else odd.add(temp);
-       }
+        while (odd.size() < 10 || even.size() < 10) {
+            for (int i = 1; i <= liczby; i++) {
+                int temp = random.nextInt(100) + 1;
+                if (temp % 2 == 0 && even.size()<10) {
+                    even.add(temp);
+                } if (temp % 2 != 0 && odd.size() < 10){
+                    odd.add(temp);
+                }
+            }
+        }
 
-        System.out.println(odd);
-        System.out.println(even);
+        System.out.println("Liczby parzyste: " + even);
+
+        System.out.println("Liczby nieparzyste: " + odd);
+
 
     }
 }

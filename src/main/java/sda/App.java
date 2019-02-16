@@ -1,14 +1,21 @@
 package sda;
 
 
+import org.apache.log4j.Logger;
+
 import java.time.LocalDateTime;
 import java.util.*;
+
 
 import static sda.BubbleSort.bubbleSort;
 
 public class App {
-    public static void main(String[] args) {
 
+    private static final Logger log = Logger.getLogger(App.class.getName());
+
+    public static void main(String[] args) {
+log.info("Log o poziomie info generuje wartości");
+log.warn("Log o poziomie warning");
 
 //Prime pierwsza = new Prime();
 //
@@ -55,30 +62,57 @@ public class App {
 //
 //        }
 
+
 //losowanie 10 z 100 liczb, przypisywanie do parzystych lub nie:
-        Random random = new Random();
-       int liczby = 20;
-       List<Integer> odd = new ArrayList<>();
-       List<Integer> even = new ArrayList<>();
-
-        while (odd.size() < 10 || even.size() < 10) {
-            for (int i = 1; i <= liczby; i++) {
-                int temp = random.nextInt(100) + 1;
-                if (temp % 2 == 0 && even.size()<10) {
-                    even.add(temp);
-                } if (temp % 2 != 0 && odd.size() < 10){
-                    odd.add(temp);
-                }
-            }
-        }
-
-        System.out.println("Liczby parzyste: " + even);
-
-        System.out.println("Liczby nieparzyste: " + odd);
-
-
+//        Random random = new Random();
+//        int liczby = 20;
+//        List<Integer> odd = new ArrayList<>();
+//        List<Integer> even = new ArrayList<>();
+//
+//        while (odd.size() < 10 || even.size() < 10) {
+//            for (int i = 1; i <= liczby; i++) {
+//                int temp = random.nextInt(100) + 1;
+//                if (temp % 2 == 0 && even.size() < 10) {
+//                    even.add(temp);
+//                }
+//                if (temp % 2 != 0 && odd.size() < 10) {
+//                    odd.add(temp);
+//                }
+//            }
+//        }
+//        System.out.println("Liczby parzyste: " + even);
+//        System.out.println("Liczby nieparzyste: " + odd);
+//
+//        Integer[] sortedEven = sort(even);
+//        for (int i = 0; i < sortedEven.length; i++) {
+//            System.out.println(sortedEven[i]);
+//        }
+//    }
+//
+//    // sortowanie przez wybieranie:
+//
+//    public static Integer[] sort(List<Integer> list) {
+//        Integer[] values = new Integer[list.size()];
+//        list.toArray(values);
+//        for (int i = 0; i <= values.length - 1; i++) {
+//            int min = values[i];
+//            int minIndex = i;
+//            for (int j = i; j <= values.length - 1; j++) {
+//                if (values[j] <= min) {
+//                    min = values[j];
+//                    minIndex = j;
+//                }
+//            }
+//            int temp = values[i];
+//            values[i] = min;
+//            values[minIndex] = temp;
+//        }
+//        return values;
     }
 }
+
+
+
 
 
 

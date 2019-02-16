@@ -2,9 +2,7 @@ package sda;
 
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static sda.BubbleSort.bubbleSort;
 
@@ -41,21 +39,37 @@ public class App {
 //        System.out.println(toDoList.getTasksComp(TaskSorting.sortyByDateAndPriority()));
 
 
-BubbleSort b = new BubbleSort();
-        int [] arr = {4, 7, 9, 1, 3, 5, 52, 91, 2, 0};
+//BubbleSort b = new BubbleSort();
+//        int [] arr = {4, 7, 9, 1, 3, 5, 52, 91, 2, 0};
+//
+//        System.out.println("Array Before Bubble Sort");
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//        System.out.println();
+//b.bubbleSort(arr);
+//
+//        System.out.println("Array After Bubble Sort");
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//
+//        }
 
-        System.out.println("Array Before Bubble Sort");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-b.bubbleSort(arr);
+//losowanie 10 z 100 liczb, przypisywanie do parzystych lub nie:
+        Random random = new Random();
+       int liczby = 10;
+       List<Integer> odd = new ArrayList<>();
+       List<Integer> even = new ArrayList<>();
 
-        System.out.println("Array After Bubble Sort");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+       for (int i= 1; i <= liczby; i++) {
+           int temp = random.nextInt(100);
+           if (temp %2 ==0) even.add(temp);
+           else odd.add(temp);
+       }
 
-        }
+        System.out.println(odd);
+        System.out.println(even);
+
     }
 }
 
